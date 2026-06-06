@@ -10,16 +10,13 @@ Instead of relying on simple, exact-keyword matching, this system computes the s
 
 The application is engineered with a decoupled, modular pipeline split into three clear operational layers:
 
-1. 
-**Data Ingestion Layer:** Reads localized source documents (`.txt`, `.pdf`, `.docx`), normalizes and splits raw text into manageable chunks, and passes strings downstream.
+1. **Data Ingestion Layer:** Reads localized source documents (`.txt`, `.pdf`, `.docx`), normalizes and splits raw text into manageable chunks, and passes strings downstream.
 
 
-2. 
-**Embedding & Core AI Engine:** Leverages a local Sentence-Transformers model to convert text strings into high-density, 384-dimensional conceptual vectors.
+2. **Embedding & Core AI Engine:** Leverages a local Sentence-Transformers model to convert text strings into high-density, 384-dimensional conceptual vectors.
 
 
-3. 
-**Vector Database Layer:** Utilizes a containerized PostgreSQL database equipped with `pgvector` to store chunks alongside their vector data and run ultra-fast Cosine Distance (`<=>`) comparison queries.
+3. **Vector Database Layer:** Utilizes a containerized PostgreSQL database equipped with `pgvector` to store chunks alongside their vector data and run ultra-fast Cosine Distance (`<=>`) comparison queries.
 
 
 
@@ -27,20 +24,16 @@ The application is engineered with a decoupled, modular pipeline split into thre
 
 Tech Stack 
 
-* 
-**Language:** Python 3.x 
+* **Language:** Python 3.x 
 
 
-* 
-**Database:** PostgreSQL (v16) with `pgvector` extension 
+* **Database:** PostgreSQL (v16) with `pgvector` extension 
 
 
-* 
-**Embedding Model:** `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` (Upgraded for robust Hindi and Malayalam cross-lingual indexing) 
+* **Embedding Model:** `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2` (Upgraded for robust Hindi and Malayalam cross-lingual indexing) 
 
 
-* 
-**Document Parsing:** `pypdf`, `python-docx` 
+* **Document Parsing:** `pypdf`, `python-docx` 
 
 
 * **Containerization:** Docker / Docker Desktop
@@ -110,9 +103,9 @@ pip install sentence-transformers psycopg2-binary pypdf python-docx
 
 ---
 
-## 💻 Usage
+## Usage
 
-📥 Ingesting Custom Documents 
+Ingesting Custom Documents 
 
 You can dynamically parse, chunk, embed, and store `.txt`, `.pdf`, or `.docx` documents by pointing the ingestion script directly to your file path:
 
@@ -121,7 +114,7 @@ python docs_import.py your_document.pdf
 
 ```
 
-🔍 Executing Semantic Search 
+ Executing Semantic Search 
 
 Launch the interactive terminal query interface:
 
