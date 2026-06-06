@@ -138,7 +138,6 @@ Type your natural language query when prompted. The engine will display the top 
 
 ```text
 ├── venv/                  # Python Virtual Environment variables
-[cite_start]├── schema.sql             # PostgreSQL database table creation schema 
 [cite_start]├── import_docs.py         # Unified ingestion tool (Extracts, chunks, embeds, stores) 
 [cite_start]├── search_docs.py         # Interactive, cross-lingual vector search runtime loop 
 [cite_start]├── README.md              # Setup instructions and documentation
