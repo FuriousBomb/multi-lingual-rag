@@ -52,8 +52,8 @@ Setup & Installation
 1. Clone the Repository 
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/FuriousBomb/multi-lingual-rag.git
+cd pipeline
 
 ```
 
@@ -82,7 +82,7 @@ CREATE EXTENSION IF NOT EXISTS vector;
 
 CREATE TABLE IF NOT EXISTS documents (
     id SERIAL PRIMARY KEY,
-    document_name VARCHAR(255) NOT NULL,
+    d_name VARCHAR(255) NOT NULL,
     chunk_text TEXT NOT NULL,
     embedding vector(384),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -117,7 +117,7 @@ pip install sentence-transformers psycopg2-binary pypdf python-docx
 You can dynamically parse, chunk, embed, and store `.txt`, `.pdf`, or `.docx` documents by pointing the ingestion script directly to your file path:
 
 ```bash
-python import_docs.py your_document.pdf
+python docs_import.py your_document.pdf
 
 ```
 
@@ -126,7 +126,7 @@ python import_docs.py your_document.pdf
 Launch the interactive terminal query interface:
 
 ```bash
-python search_docs.py
+python semantic_search.py
 
 ```
 
@@ -138,10 +138,10 @@ Type your natural language query when prompted. The engine will display the top 
 
 ```text
 ├── venv/                  # Python Virtual Environment variables
-[cite_start]├── schema.sql             # PostgreSQL database table creation schema [cite: 64]
-[cite_start]├── import_docs.py         # Unified ingestion tool (Extracts, chunks, embeds, stores) [cite: 65]
-[cite_start]├── search_docs.py         # Interactive, cross-lingual vector search runtime loop [cite: 66]
-[cite_start]├── README.md              # Setup instructions and documentation [cite: 63]
+[cite_start]├── schema.sql             # PostgreSQL database table creation schema 
+[cite_start]├── import_docs.py         # Unified ingestion tool (Extracts, chunks, embeds, stores) 
+[cite_start]├── search_docs.py         # Interactive, cross-lingual vector search runtime loop 
+[cite_start]├── README.md              # Setup instructions and documentation
 └── architecture.png       # High-level system interaction schematic diagram
 
 ```
