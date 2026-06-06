@@ -138,9 +138,11 @@ Type your natural language query when prompted. The engine will display the top 
 
 ```text
 ├── venv/                  # Python Virtual Environment variables
-[cite_start]├── import_docs.py         # Unified ingestion tool (Extracts, chunks, embeds, stores) 
-[cite_start]├── search_docs.py         # Interactive, cross-lingual vector search runtime loop 
-[cite_start]├── README.md              # Setup instructions and documentation
+├── test_results/          # test results from previous sample dataset
+├── import_docs.py         # Unified ingestion tool (Extracts, chunks, embeds, stores) 
+├── search_docs.py         # Interactive, cross-lingual vector search runtime loop
+├── sample_dataset.pdf     # sample pdf with hindi and english data (SEBI regulations article)
+├── README.md              # Setup instructions and documentation
 └── architecture.png       # High-level system interaction schematic diagram
 
 ```
